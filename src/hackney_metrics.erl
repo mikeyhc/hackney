@@ -20,7 +20,7 @@
 
 
 init() ->
-  Metrics = metrics:init(hackney_util:mod_metrics()),
+  Metrics = metrics:new(hackney_util:mod_metrics()),
   ets:insert(?CONFIG, {mod_metrics, Metrics}).
 
 get_engine() ->
